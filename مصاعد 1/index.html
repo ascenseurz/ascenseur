@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCENSEUR | مصاعد متطورة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(45deg, #D4AF37, #F0E68C);
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+        .project-overlay {
+            background: rgba(26, 26, 26, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+        }
+        .product-image img {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+        .scroll-header {
+            background-color: rgba(26, 26, 26, 0.98) !important;
+            padding: 10px 0 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-auto">
+    <!-- Header -->
+    <header class="fixed w-full bg-gray-900 bg-opacity-95 z-50 py-4 shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/asl-arabic.appspot.com/o/ASCENSEUR%2F%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9%202025-07-17%20013957%20(1)%20(1).png?alt=media&token=8625dd63-fa01-4e8e-9037-2168c81bb332" 
+                     alt="ASCENSEUR Logo" class="h-14 ml-3">
+                <h1 class="text-white text-2xl font-bold">ASCENSEUR<span class="gold-text"></span></h1>
+            </div>
+            
+
+            <div class="hidden md:flex space-x-1">
+                <a href="https://www.snapchat.com/add/ascenseur_ksa?share_id=suWziKEf8DM&locale=ar-SA" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-snapchat-ghost text-xl"></i>
+                </a>
+             
+            </div>
+            
+            <div class="hidden md:flex space-x-1">
+                
+                
+                <a href="https://www.tiktok.com/@ksa_5040?_t=ZS-8yVuXocAWhE&_r=1" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-tiktok text-xl"></i>
+                    
+                </a>
+              
+            </div>
+
+
+            <div class="hidden md:flex space-x-">
+               
+                <a href="https://wa.me/+966596767659" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+
+            <nav class="hidden md:block">
+                <ul class="flex space-x-10">
+                    <li><a href="index.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الرئيسية</a></li>
+                    <li><a href="index.html" class="text-white hover:text-yellow-500 text-lg transition-colors"></a></li>
+
+
+                    <li><a href="about.html" class="text-white hover:text-yellow-500 text-lg transition-colors">عن الشركة</a></li>
+                    <li><a href="services.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الخدمات</a></li>
+                    <li><a href="maintenance.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الصيانة</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-yellow-500 text-lg transition-colors">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <button class="md:hidden text-white text-2xl focus:outline-none mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-900 w-full py-4 px-4">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الرئيسية</a></li>
+                <li><a href="about.html" class="text-white hover:text-yellow-500 text-lg transition-colors">عن الشركة</a></li>
+                <li><a href="services.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الخدمات</a></li>
+        <div class="mobile-menu md:hidden bg-gray-900 w-full py-4 px-4">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الرئيسية</a></li>
+                <li><a href="about.html" class="text-white hover:text-yellow-500 text-lg transition-colors">عن الشركة</a></li>
+                <li><a href="services.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الخدمات</a></li>
+                <li><a href="maintenance.html" class="text-white hover:text-yellow-500 text-lg transition-colors">الصيانة</a></li>
+                <li><a href="contact.html" class="text-white hover:text-yellow-500 text-lg transition-colors">تواصل معنا</a></li>
+                <li class="flex space-x-4 pt-4">
+                    <a href="https://www.snapchat.com/add/ascenseur_ksa?share_id=suWziKEf8DM&locale=ar-SA" 
+                       class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                        <i class="fab fa-snapchat-ghost text-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ksa_5040?_t=ZS-8yVuXocAWhE&_r=1" 
+                       class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/+966596767659" 
+                       class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <img src="https://lifts.com.sa/wp-content/uploads/2024/02/Figure2.png" 
+             alt="Modern Building" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">حلول المصاعد المتميزة لمستقبلك</h2>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+                نقدم أفضل خدمات تركيب وصيانة وتحديث المصاعد بأحدث التقنيات والمعايير العالمية
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="gold-gradient text-gray-900 font-bold py-3 px-8 rounded-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    اطلب عرض سعر
+                </a>
+                <a href="https://firebasestorage.googleapis.com/v0/b/asl-arabic.appspot.com/o/ASCENSEUR%2FWhite%20Navy%20Orange%20Modern%20Elevator%20Services%20Twitter%20Post%20(3)%20(1).pdf?alt=media&token=03f9dd80-59ca-4327-8f50-1042a88540c7" 
+                   class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    تحميل الكتالوج
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="gold-text text-3xl md:text-4xl font-bold mb-6">ASCENSEUR قصة نجاح في عالم المصاعد</h2>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        تأسست ASCENSEUR برؤية واضحة لتكون في صدارة الشركات الرائدة في مجال المصاعد بالمملكة. نفخر بمسيرتنا التي بنيت على الالتزام بالجودة، الدقة في التنفيذ، والابتكار المستمر.
+                    </p>
+                    <p class="text-gray-700 mb-4 text-lg leading-relaxed">
+                        يضم فريقنا نخبة من المهندسين والفنيين ذوي الكفاءة العالية، الذين يعملون بشغف لتقديم أفضل الحلول التي تتوافق مع المعايير الدولية وتفوق توقعات عملائنا.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        مهمتنا لا تقتصر على تركيب المصاعد فحسب، بل تمتد لتوفير تجربة آمنة ومريحة ودائمة.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="فريق العمل" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="gold-text text-3xl md:text-4xl font-bold mb-16 text-center">أهم الخدمات</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg text-center transition-all duration-300 service-card">
+                    <div class="gold-text text-5xl mb-6">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">التركيب</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        تصميم وتنفيذ حلول مصاعد مخصصة للمباني السكنية، التجارية، والمستشفيات باستخدام أحدث التقنيات والمكونات عالية الجودة.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg text-center transition-all duration-300 service-card">
+                    <div class="gold-text text-5xl mb-6">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">الصيانة</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        عقود صيانة شاملة ووقائية لضمان عمل المصاعد بكفاءة وأمان تام مع خدمة طوارئ على مدار 24 ساعة للتدخل السريع.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg text-center transition-all duration-300 service-card">
+                    <div class="gold-text text-5xl mb-6">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">التحديث</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        تطوير وتحديث الأنظمة القديمة لزيادة الكفاءة، الأمان، وتوفير الطاقة مع تغيير لوحات التحكم، المحركات، وتصميم الكبائن.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="gold-text text-3xl md:text-4xl font-bold mb-16 text-center">منتجاتنا المميزة</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 product-card">
+                    <div class="product-image h-64 overflow-hidden">
+                        <img src="https://news.egylifts.com/wp-content/uploads/2021/03/%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A8%D9%8A%D9%86-%D9%85%D8%B5%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D8%B1%D9%83%D8%A7%D8%A8-%D9%88%D9%85%D8%B5%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9-780x470.jpg" 
+                             alt="مصعد الركاب" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">مصاعد الركاب</h3>
+                        <p class="text-gray-600">
+                            مصاعد حديثة وآمنة لنقل الركاب بسلاسة وكفاءة في المباني السكنية والتجارية.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 product-card">
+                    <div class="product-image h-64 overflow-hidden">
+                        <img src="https://sa.chrkat.com/wp-content/uploads/sites/4/classified-listing/2020/04/%D8%AA%D9%88%D8%B1%D9%8A%D8%AF-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D9%85%D8%B5%D8%A7%D8%B9%D8%AF-%D8%A8%D8%A7%D9%86%D9%88%D8%B1%D8%A7%D9%85%D8%A7-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.jpg" 
+                             alt="مصعد بانورامي" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">مصاعد بانورامية</h3>
+                        <p class="text-gray-600">
+                            مصاعد بتصميم زجاجي مبتكر توفر إطلالة بانورامية أثناء التنقل مع أعلى معايير الأمان.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 product-card">
+                    <div class="product-image h-64 overflow-hidden">
+                        <img src="https://waelelevators.com/wp-content/uploads/2025/03/Luzkovevytahy-ezgif.com-jpg-to-webp-converter-1024x683.webp" 
+                             alt="مصعد مستشفيات" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">مصاعد المستشفيات</h3>
+                        <p class="text-gray-600">
+                            مصاعد متخصصة مصممة خصيصاً لاحتياجات المستشفيات مع مساحات واسعة ومواصفات طبية متطورة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="gold-text text-3xl md:text-4xl font-bold mb-16 text-center">لماذا ASCENSEUR؟</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg border-t-4 gold-border">
+                    <div class="gold-text text-4xl mb-6">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">فريق متخصص</h3>
+                    <p class="text-gray-600">
+                        نخبة من المهندسين والفنيين ذوي الخبرة العالية في مجال المصاعد والصيانة.
+                    </p>
+                </div>
+                
+                <!-- Point 2 -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg border-t-4 gold-border">
+                    <div class="gold-text text-4xl mb-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">جودة عالمية</h3>
+                    <p class="text-gray-600">
+                        نستخدم أحدث التقنيات والمعايير العالمية في جميع مراحل العمل.
+                    </p>
+                </div>
+                
+                <!-- Point 3 -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg border-t-4 gold-border">
+                    <div class="gold-text text-4xl mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">خدمة 24/7</h3>
+                    <p class="text-gray-600">
+                        خدمة عملاء متاحة على مدار الساعة للتعامل مع أي طارئ أو استفسار.
+                    </p>
+                </div>
+                
+                <!-- Point 4 -->
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg border-t-4 gold-border">
+                    <div class="gold-text text-4xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">أمان مضمون</h3>
+                    <p class="text-gray-600">
+                        جميع منتجاتنا وخدماتنا تخضع لأعلى معايير السلامة والجودة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section id="maintenance" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="gold-text text-3xl md:text-4xl font-bold mb-6">صيانة وقائية لضمان سلامتك</h2>
+                <p class="text-gray-700 text-xl mb-10 leading-relaxed">
+                    تُعد الصيانة الدورية حجر الزاوية لضمان عمل المصعد بشكل آمن وفعال. فريقنا المتخصص يقوم بفحوصات شاملة للكشف عن أي مشكلات محتملة قبل حدوثها. نقدم عقود صيانة مرنة تناسب احتياجاتك، بالإضافة إلى خدمة الطوارئ 24/7 لراحة بال تامة.
+                </p>
+                <a href="#contact" class="gold-gradient text-gray-900 font-bold py-3 px-8 rounded-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 inline-block">
+                    اطلب عرض صيانة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="gold-text text-3xl md:text-4xl font-bold mb-16 text-center">أحدث المشاريع</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://lifts.com.sa/wp-content/uploads/2024/02/div.react-player__preview.png" 
+                         alt="مشروع 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">مجمع سكني فاخر</h3>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://elegentlifts.com/wp-content/uploads/2024/04/bed-ar-image2.webp" 
+                         alt="مشروع 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">مستشفى متخصص</h3>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://news.egylifts.com/wp-content/uploads/2021/06/Untitled-3-780x470.jpg" 
+                         alt="مشروع 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">مبنى إداري</h3>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://goldenlines.com.sa/wp-content/uploads/2021/09/fuj_RITZ-CARLTON-N_003-1-2048x1366.jpg" 
+                         alt="مشروع 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">فندق خمس نجوم</h3>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://elreyada-elevator.com/wp-content/uploads/2022/10/nv2sF8a.jpg" 
+                         alt="مشروع 5" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">مركز تجاري</h3>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="relative h-64 rounded-xl overflow-hidden project-card">
+                    <img src="https://elevators.hilift-egypt.com/wp-content/uploads/2021/12/3.png" 
+                         alt="مشروع 6" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center project-overlay">
+                        <h3 class="text-white text-2xl font-bold">برج سكني</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="gold-text text-3xl md:text-4xl font-bold mb-16 text-center">نحن هنا لخدمتك</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="gold-text text-2xl mt-1">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">الهاتف</h3>
+                                <p class="text-gray-600">
+                                    رقم الهاتف: <a href="tel:+966596767659" class="hover:text-yellow-600 transition-colors">+966596767659</a>
+                                </p>
+                                <a href="https://wa.me/+966596767659" 
+                                   class="inline-flex items-center mt-2 text-yellow-600 hover:text-yellow-700 transition-colors">
+                                    <i class="fab fa-whatsapp mr-2 text-xl"></i> واتساب
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="gold-text text-2xl mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">البريد الإلكتروني</h3>
+                                <a href="mailto:ascenseurksa@hotmail.com" class="text-gray-600 hover:text-yellow-600 transition-colors">
+                                    ascenseurksa@hotmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="gold-text text-2xl mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">العنوان</h3>
+                                <p class="text-gray-600">الرياض حي الرمال، السعودية</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="gold-text text-2xl mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-800">ساعات العمل</h3>
+                                <p class="text-gray-600">السبت - الخميس: 8:00 صباحاً - 11:59 مساءً</p>
+                                <p class="text-gray-600">الجمعة: 01:00 مساءً - 11:59 مساءً</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                      
+            <div class="hidden md:flex space-x-1">
+                <a href="https://www.snapchat.com/add/ascenseur_ksa?share_id=suWziKEf8DM&locale=ar-SA" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-snapchat-ghost text-xl"></i>
+                </a>
+           
+            
+            <div class="hidden md:flex space-x-1">
+                
+                
+                <a href="https://www.tiktok.com/@ksa_5040?_t=ZS-8yVuXocAWhE&_r=1" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-tiktok text-xl"></i>
+                    
+                </a>
+              
+            
+
+
+            <div class="hidden md:flex space-x-">
+               
+                <a href="https://wa.me/+966596767659" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="lg:w-1/2 rounded-xl overflow-hidden shadow-xl h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467570.5900683495!2d46.34156925!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0x2c1f1c9b0a4c0c0!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="gold-text text-2xl font-bold mb-6">ASCENSEUR</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        شركة رائدة في مجال المصاعد تقدم حلول مبتكرة وآمنة لجميع احتياجات نقل الركاب والبضائع.
+                    </p>
+                    
+            <div class="hidden md:flex space-x-1">
+                <a href="https://www.snapchat.com/add/ascenseur_ksa?share_id=suWziKEf8DM&locale=ar-SA" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-snapchat-ghost text-xl"></i>
+                </a>
+             
+            </div>
+            
+            <div class="hidden md:flex space-x-1">
+                
+                
+                <a href="https://www.tiktok.com/@ksa_5040?_t=ZS-8yVuXocAWhE&_r=1" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-tiktok text-xl"></i>
+                    
+                </a>
+              
+            </div>
+
+
+            <div class="hidden md:flex space-x-">
+               
+                <a href="https://wa.me/+966596767659" 
+                   class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white hover:bg-yellow-600 hover:text-white transition-all">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="gold-text text-2xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-500 transition-colors">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-500 transition-colors">عن الشركة</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-500 transition-colors">الخدمات</a></li>
+                        <li><a href="maintenance.html" class="text-gray-400 hover:text-yellow-500 transition-colors">الصيانة</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-500 transition-colors">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="gold-text text-2xl font-bold mb-6">خدماتنا</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">تركيب المصاعد</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">صيانة المصاعد</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">تحديث المصاعد</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">قطع الغيار</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">استشارات فنية</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="gold-text text-2xl font-bold mb-6">معلومات الاتصال</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-1 text-gray-400"></i>
+                            <span class="text-gray-400">+966596767659</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-gray-400"></i>
+                            <span class="text-gray-400">ascenseurksa@hotmail.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-gray-400"></i>
+                            <span class="text-gray-400">الرياض حي الرمال، السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p>&copy; 2025 ASCENSEUR جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.querySelector('.mobile-menu').classList.remove('active');
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scroll-header');
+            } else {
+                header.classList.remove('scroll-header');
+            }
+        });
+    </script>
+</body>
+</html>
